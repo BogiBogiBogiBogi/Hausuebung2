@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Bagger {
-    List<String> list = new ArrayList<String>();
+public class HalloJavamitForEach {
+    static List<String> list = new ArrayList<String>();
     
-    void testForEach()
+    public static void main(String[] args)
     {
         list.add("hallo");
         list.add("yellow");
