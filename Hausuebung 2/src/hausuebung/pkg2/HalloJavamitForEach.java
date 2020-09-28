@@ -19,6 +19,9 @@ public class HalloJavamitForEach {
         System.out.println(" ");
         
         NumberTester numtes = new NumberTester("hehehe.txt");
+        
+        numtes.setOddEvenTester();
+        
         numtes.testFile();
     }
 }

@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 
 public class NumberTester{
     String path;
-    List<Integer> liste = new ArrayList<Integer>();
     NumberTest oddTester;
     NumberTest primeTester;
     NumberTest palindromeTester;
@@ -41,9 +40,6 @@ public class NumberTester{
         File f = new File(this.path);
         try {
             Scanner scanner = new Scanner(f);
-            this.lineAmount = Integer.parseInt(scanner.nextLine());
-            System.out.println(lineAmount);
-            
             while(scanner.hasNext())
             {
                 String lines = scanner.nextLine();
@@ -52,16 +48,43 @@ public class NumberTester{
                 switch(array[0])
                 {
                     case "1":
-                        this.oddTester = array[1];
+                        boolean isOdd = this.oddTester.testNumber(Integer.parseInt(array[1]));
+                        if(isOdd)
+                        {
+                            System.out.println("EVEN");
+                        }
+                        else
+                        {
+                            System.out.println("ODD");
+                        }
                     break;
                     
                     case "2":
-                        
+                        boolean isPrime = this.primeTester.testNumber(Integer.parseInt(array[1]));
+                        if(isPrime)
+                        {
+                            System.out.println("PRIME");
+                        }
+                        else
+                        {
+                            System.out.println("NO PRIME");
+                        }
                     break;
                     
                     case "3":
-                        
+                        boolean isPalindrome = this.palindromeTester.testNumber(Integer.parseInt(array[1]));
+                        if(isPalindrome)
+                        {
+                            System.out.println("PALINDROME");
+                        }
+                        else
+                        {
+                            System.out.println("NO PALINDROME");
+                        }
                     break;
+                    
+                    default:System.exit(0);
+                        break;
                 }
             }
             
