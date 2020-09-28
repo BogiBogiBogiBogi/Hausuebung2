@@ -15,5 +15,10 @@ public class HalloJavamitForEach {
         list.add("hallo");
         list.forEach((String s) -> System.out.println(s));
         
+        
+        System.out.println(" ");
+        
+        NumberTester numtes = new NumberTester("hehehe.txt");
+        numtes.testFile();
     }
 }

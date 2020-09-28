@@ -15,6 +15,7 @@ public class NumberTester{
     NumberTest oddTester;
     NumberTest primeTester;
     NumberTest palindromeTester;
+    int lineAmount;
     
     public NumberTester(String fileName) {
         this.path = fileName;
@@ -40,6 +41,9 @@ public class NumberTester{
         File f = new File(this.path);
         try {
             Scanner scanner = new Scanner(f);
+            this.lineAmount = Integer.parseInt(scanner.nextLine());
+            System.out.println(lineAmount);
+            
         } catch (FileNotFoundException ex) {
             Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
         }
