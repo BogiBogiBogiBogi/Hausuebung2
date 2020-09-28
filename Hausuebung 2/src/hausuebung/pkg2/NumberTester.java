@@ -44,12 +44,29 @@ public class NumberTester{
             this.lineAmount = Integer.parseInt(scanner.nextLine());
             System.out.println(lineAmount);
             
+            while(scanner.hasNext())
+            {
+                String lines = scanner.nextLine();
+                String array[] = lines.split(" ");
+                
+                switch(array[0])
+                {
+                    case "1":
+                        this.oddTester = array[1];
+                    break;
+                    
+                    case "2":
+                        
+                    break;
+                    
+                    case "3":
+                        
+                    break;
+                }
+            }
+            
         } catch (FileNotFoundException ex) {
             Logger.getLogger(NumberTester.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
-    public interface NumberTest {
-        boolean testNumber(int number);
     }
 }
